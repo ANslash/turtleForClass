@@ -10,18 +10,22 @@ mathTurtle.speed("fastest")
 yAxis = turtle.Turtle()
 yAxis.hideturtle()
 yAxis.color("#767889")
+yAxis.speed("fastest")
 
 xAxis = turtle.Turtle()
 xAxis.hideturtle()
 xAxis.color("#767889")
+xAxis.speed("fastest")
 
 negyAxis = turtle.Turtle()
 negyAxis.hideturtle()
 negyAxis.color("#767889")
+negyAxis.speed("fastest")
 
 negxAxis = turtle.Turtle()
 negxAxis.hideturtle()
 negxAxis.color("#767889")
+negxAxis.speed("fastest")
 
 # Make grid
 yAxis.lt(90)
@@ -29,16 +33,18 @@ negyAxis.rt(90)
 
 negxAxis.lt(180)
 
+mathTurtle.write("0")
+
 for i in range(10):
     xAxis.forward(50)
     yAxis.forward(50)
     negxAxis.forward(50)
     negyAxis.forward(50)
 
-    xAxis.write(f"{i}")
-    negxAxis.write(f"-{i}")
-    yAxis.write(f"{i}")
-    negyAxis.write(f"-{i}")
+    xAxis.write(f"{i + 1}")
+    negxAxis.write(f"-{i + 1}")
+    yAxis.write(f"{i + 1}")
+    negyAxis.write(f"-{i + 1}")
 
 # Funktion to display simple "y = a*x + b" graph
 def displaySimpleGraph():
@@ -53,6 +59,7 @@ def displaySimpleGraph():
     if a > 0 or a < 0:
         for i in range(1, abs(a)):
             turnTurtle += 90 / math.pow(2, i)
+
         if a < 0:
             turnTurtle *= -1
 
