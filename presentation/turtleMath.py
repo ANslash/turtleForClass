@@ -1,4 +1,5 @@
 import turtle
+import math
 
 # Create line turtle
 mathTurtle = turtle.Turtle()
@@ -51,7 +52,9 @@ def displaySimpleGraph():
     turnTurtle = 0
     if a > 0 or a < 0:
         for i in range(1, abs(a)):
-            turnTurtle += 90 / (2 ** i)
+            turnTurtle += 90 / math.pow(2, i)
+        if a < 0:
+            turnTurtle *= -1
 
         mathTurtle.lt(turnTurtle)
 
